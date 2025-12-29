@@ -1,12 +1,10 @@
-import { Client, GatewayIntentBits } from "discord.js";
+const { Client, GatewayIntentBits } = require('discord.js');
 
 const client = new Client({
-  intents: [
-    GatewayIntentBits.Guilds
-  ]
+  intents: [GatewayIntentBits.Guilds]
 });
 
-client.once("ready", () => {
+client.once('ready', () => {
   console.log(`Logged in as ${client.user.tag}`);
 });
 
